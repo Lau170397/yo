@@ -2,7 +2,7 @@ const { mongoose, Schema } = require('mongoose');
 
 // Esquema para los productos del gimnasio
 const ProductSchema = Schema({
-  name: {
+  title: {
     type: String,
     required: true
   },
@@ -10,14 +10,14 @@ const ProductSchema = Schema({
     type: Number,
     required: true
   },
-  category: {
+  description: {
     type: String,
     required: true
   },
-  stock: {
-    type: Number,
-    required: true
-  }
+  // stock: {
+  //   type: Number,
+  //   required: true
+  // }
 });
 
 // Creamos el modelo a partir del esquema

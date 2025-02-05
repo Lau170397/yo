@@ -1,0 +1,5 @@
+conexion mongo: 
+mongodb+srv://adrianabrandan22:1234@cluster0.1x7xn.mongodb.net/
+
+usuario: adrianabrandan22
+contraseña 1234
