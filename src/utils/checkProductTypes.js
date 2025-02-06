@@ -10,7 +10,7 @@ const checkProductTypes = (request, response, next) => {
     if (validationErrors.length > 0) {
       return response.json({
         statusCode: 400,
-        message: "Revisa el objeto que mandas",
+        message: "Revisá el objeto que mandas",
         validationErrors
       });
     }
