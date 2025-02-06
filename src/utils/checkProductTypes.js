@@ -3,7 +3,7 @@ const checkProductTypes = (request, response, next) => {
     const validationErrors = [];
   
     if (typeof product.id !== "string") validationErrors.push("ID debe ser un string");
-    if (typeof product.title !== "string") validationErrors.push("Name debe ser un string");
+    if (typeof product.title !== "string") validationErrors.push("Title debe ser un string");
     if (typeof product.description !== "string") validationErrors.push("Description debe ser un string");
     if (typeof product.price !== "number") validationErrors.push("Price debe ser un number");
   
