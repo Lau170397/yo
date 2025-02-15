@@ -16,7 +16,7 @@ const ProductSchema = Schema({
     required: true
   },
 
-});
+}, { versionKey: false });
 
 // Creamos el modelo a partir del esquema
 const ProductModel = mongoose.model("Product", ProductSchema);
