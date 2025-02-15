@@ -1,0 +1,92 @@
+.ProfesSection {
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    padding: 4% 6%; 
+    background-color:  #212529;
+  }
+
+ .container{
+   width: 90%;
+   margin: 25% auto;
+   display: flex;
+   justify-content: space-evenly;
+   column-gap: 15px;
+   row-gap: 35px;
+   flex-wrap: wrap;
+ } 
+
+  .description {
+    color: white;
+    font-size: 1.2rem;
+    line-height: 1.8em;
+    margin-bottom: 30px;
+    text-align: justify;
+    max-width: 80%; 
+  } 
+
+  .card {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    background-color: yellow;
+    text-align: center;
+  }
+
+ .card:hover {
+   transform: translateY(-5px);
+ }
+
+ .card-imagen{
+    width: 220px;
+    height: 270px;
+  }
+
+.card-imagen img{
+   width: 200px;
+   height: 280px;
+   object-fit: cover;
+   border-radius: 10px 10px 0 0;
+}
+
+ .card-body {
+   padding: 1px;
+ } 
+
+ .card-body>h3{
+   font-size: 1.3rem;
+   margin: auto;
+ }
+ 
+ .card-description {
+   font-size: 1rem;
+   color: #555;
+   padding: 25px;
+ }
+
+   /*media queris*/
+
+   @media (max-width:768px) {
+      .card {
+      
+         height: 260px;
+        margin-bottom: -100px;      
+       }
+      .title {
+          margin: 25px auto 0;
+          max-width: 80%;
+      }
+      .description {
+        margin: 25px;
+        max-width: 70%;
+  
+      }
+   }
+ 
