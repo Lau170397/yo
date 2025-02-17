@@ -14,4 +14,18 @@ const validateProduct = [
   }
 ];
 
-module.exports = validateProduct;
+// Middleware para validar clases
+const validateClase = [
+  check("image").notEmpty().withMessage("La imagen es obligatoria").isURL().withMessage("Debe ser una URL válida"),
+  check("title").notEmpty().withMessage("El título de la clase es obligatorio").isString().withMessage("El título debe ser un string"),
+  check("description").notEmpty().withMessage("La descripción es obligatoria").isString().withMessage("La descripción debe ser un string"),
+  (req, res, next) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
+    }
+    next();
+  }
+];
+
+module.exports = { validateProduct, validateClase };
