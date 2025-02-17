@@ -1,5 +1,5 @@
 const express = require('express');
-const router = require('../routes/productos.routes');
+const router = require('../routes/routes');
 
 // Configurar el servidor
 const server = express();
