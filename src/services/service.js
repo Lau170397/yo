@@ -1,5 +1,6 @@
 const ProductModel = require("../models/product.model");
 
+
 // Servicio para obtener todos los productos
 const getAllProductService = async (request) => {
   const allProducts = await ProductModel.find();
