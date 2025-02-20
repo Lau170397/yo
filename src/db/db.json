@@ -133,5 +133,21 @@
       "price": 60000
     }
   ],
-  "cart": []
+  "cart": [
+    {
+      "id": "product-2",
+      "title": "Remera Deportiva",
+      "description": "Remera ideal para entrenamiento fresca y comoda.",
+      "price": 10000,
+      "image": "/images/img2.jpg",
+      "quantity": 1
+    },
+    {
+      "id": "plan-2",
+      "title": "Plan Avanzado",
+      "description": "Acceso completo a todas las instalaciones y clases.",
+      "price": 40000,
+      "quantity": 1
+    }
+  ]
 }
