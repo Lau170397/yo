@@ -1,18 +1,23 @@
 const express = require('express');
-const router = require('../routes/routes');
+const cors = require('cors');
+
+const productRoutes = require('../routes/products.routes'); // Rutas de productos
+const clasesRoutes = require('../routes/clases.routes'); // Nueva ruta para clases
 
 // Configurar el servidor
 const server = express();
 
-// Le permite a express entender el json del body de las peticiones
-server.use(express.json())
+// Middlewares
+server.use(express.json()); // Permite recibir JSON en las peticiones
+server.use(cors()); // Evita problemas de CORS en el frontend
 
-// Configuración de los routers -> delegado -> routers
-server.get('/', (request, response) => {
-    response.send("Bienvenidos a la API de productos del gimnasio")
-})
+// Ruta de bienvenida
+server.get('/', (req, res) => {
+    res.send("Bienvenidos a la API de productos y clases del gimnasio");
+});
 
-// Ejecutar los routers
-server.use('/', router)
+// Configuración de las rutas
+server.use('/api', productRoutes); // Rutas para productos
+server.use('/api', clasesRoutes); // Rutas para clases
 
 module.exports = server;

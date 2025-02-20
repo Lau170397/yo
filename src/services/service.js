@@ -43,10 +43,11 @@ const updateProductService = async (request) => {
       return { message: "Producto no encontrado", statusCode: 404 };
     }
 
-    productById.name = productToEdit.name;
+    productById.title = productToEdit.title;
+    productById.description = productToEdit.description;
     productById.price = productToEdit.price;
-    productById.category = productToEdit.category;
-    productById.stock = productToEdit.stock;
+    
+    
 
     await productById.save();
     return { message: "Producto actualizado con éxito", statusCode: 200 };
